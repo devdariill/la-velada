@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
 	<header class="relative">
 		<div class="absolute left-1/2 -translate-x-1/2 flex flex-col gap-1 justify-center items-center top-8">
 			<img class="w-32 lg:w-64 h-auto" src="/logo.webp" alt="logo">
-			<h1 class="text-6xl uppercase text-center">La Velada del Año</h1>
+			<h1 class="text-6xl uppercase text-center font-facon">La Velada del Año</h1>
 		</div>
 	</header>
 	<main>
@@ -39,5 +39,22 @@ import Layout from '../layouts/Layout.astro';
 	</footer>
 </Layout>
 <style is:global>
-
+	html {
+		color-scheme: dark;
+	}
+	/* @font-face {
+		font-family: 'Boxing';
+		src: url('/fonts/BrackleyDemoItalic.ttf');
+		font-weight: bold;
+	}
+	@font-face {
+		font-family: 'Boxing Striped';
+		src: url('/fonts/BrackleyDemoRegular.ttf');
+		font-weight: bold;
+	} */
+	@font-face {
+		font-family: 'Facon';
+		src: url('/fonts/Facon.ttf');
+		font-weight: bold;
+	}
 </style>
