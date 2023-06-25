@@ -3,5 +3,35 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>La velada</main>
+	<header>		
+	</header>
+	<main>
+		<section id="boxeadores"
+		class={`flex justify-between relative
+		[&>div>img]:absolute [&>div>img]:bottom-0
+		[&>div>img]:w-auto
+		h-screen pt-24 border-b border-white/10`}>
+			<div class="relative w-full">
+				<img class="z-" src="/boxers/coscu.webp" alt="Coscu">
+				<img class="z-" src="/boxers/mayichi.webp" alt="Mayichi">
+				<img class="z-" src="/boxers/viruzz.webp" alt="Viruzz">
+				<img class="z-" src="/boxers/fernanfloo.webp" alt="Fernanfloo">
+				<img class="z-" src="/boxers/la-rivers.png" alt="La Rivers">
+				<img class="z-" src="/boxers/papigavi.png" alt="Papi Gavi">
+			</div>
+			<div class="relative w-full">
+				<img class="z-" src="/boxers/german.webp" alt="German">
+				<img class="z-" src="/boxers/amouranth.webp" alt="Amouranth">
+				<img class="z-" src="/boxers/shelao.webp" alt="Shelao">
+				<img class="z-" src="/boxers/Luzu.webp" alt="Luzu">
+				<img class="z-" src="/boxers/rivers.png" alt="Rivers">
+				<img class="z-" src="/boxers/ampeter.png" alt="Ampeter">
+			</div>
+		</section>
+	</main>
+	<footer>		
+	</footer>
 </Layout>
+<style is:global>
+
+</style>
