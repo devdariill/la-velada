@@ -93,6 +93,14 @@
 				'filter: blur(0px) grayscale(0); transition:all .3s ease-in-out'
 			)
 		})
+		$img.addEventListener('mouseout', (e) => {
+			$boxersImages.forEach($img => {
+				$img.setAttribute(
+					'style',
+					'filter: blur(0px) grayscale(0); transition:all .3s ease-in-out'
+				)
+			})
+		})
 	})
 </script>
 
