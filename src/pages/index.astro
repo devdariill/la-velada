@@ -10,6 +10,57 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<header class="relative">
+			<div class="absolute left-1/2 -translate-x-1/2 flex flex-col gap-1 justify-center items-center top-8">
+				<img class="w-32 lg:w-64 h-auto" src="/logo.webp" alt="logo">
+				<h1 class="text-6xl uppercase text-center font-facon">La Velada del Año</h1>
+			</div>
+		</header>
+	<main>
+		<section id="boxeadores"
+		class={`flex justify-between relative
+		[&>div>img]:absolute [&>div>img]:bottom-0
+		[&>div>img]:w-auto
+		h-[50vh] lg:h-screen pt-24 border-b border-white/10
+		[&>div>img]:animate-ease-in-out [&>div>img]:animate-duration-1000
+		`}>
+			<div class="relative w-full">
+				<img class="left-0 h-[95%] animate-fade-right animate-delay-500 z-50" src="/boxers/coscu.webp" alt="Coscu">
+				<img class="left-[5%] h-[80%] animate-fade-right animate-delay-700 z-40" src="/boxers/mayichi.webp" alt="Mayichi">
+				<img class="left-[15%] h-[75%] animate-fade-right animate-delay-1000 z-30" src="/boxers/viruzz.webp" alt="Viruzz">
+				<img class="left-[28%] h-[70%] animate-fade-right animate-delay-[1300ms] z-20" src="/boxers/fernanfloo.webp" alt="Fernanfloo">
+				<img class="left-[38%] h-[68%] animate-fade-right animate-delay-[1500ms] z-10" src="/boxers/la-rivers.webp" alt="La Rivers">
+				<img class="left-[43%] h-[60%] animate-fade-right animate-delay-[1700ms] z-0" src="/boxers/papigavi.webp" alt="Papi Gavi">
+			</div>
+			<div class="relative w-full">
+				<img class="right-0 h-[95%] animate-fade-left animate-delay-500 z-50" src="/boxers/german.webp" alt="German">
+				<img class="right-[5%] h-[80%] animate-fade-left animate-delay-700 z-40" src="/boxers/amouranth.webp" alt="Amouranth">
+				<img class="right-[15%] h-[75%] animate-fade-left animate-delay-1000 z-30" src="/boxers/shelao.webp" alt="Shelao">
+				<img class="right-[28%] h-[70%] animate-fade-left animate-delay-[1300ms] z-20" src="/boxers/luzu.webp" alt="Luzu">
+				<img class="right-[38%] h-[65%] animate-fade-left animate-delay-[1500ms] z-10" src="/boxers/rivers.webp" alt="Rivers">
+				<img class="right-[43%] h-[60%] animate-fade-left animate-delay-[1700ms] z-0" src="/boxers/ampeter.webp" alt="Ampeter">
+			</div>
+		</section>
+	</main>
+	<footer>		
+	</footer>
 	</body>
 </html>
+
+<style is:global>
+	/* @font-face {
+		font-family: 'Boxing';
+		src: url('/fonts/BrackleyDemoItalic.ttf');
+		font-weight: bold;
+	}
+	@font-face {
+		font-family: 'Boxing Striped';
+		src: url('/fonts/BrackleyDemoRegular.ttf');
+		font-weight: bold;
+	} */
+	@font-face {
+		font-family: 'Facon';
+		src: url('/fonts/Facon.ttf');
+		font-weight: bold;
+	}
+</style>
