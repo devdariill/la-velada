@@ -12,7 +12,7 @@ import boxers from "../clippath.json"
 	</head>
 	<body>
 		<header class="relative">
-			<div class="absolute left-1/2 -translate-x-1/2 flex flex-col gap-1 justify-center items-center top-8 z-10">
+			<div class="md:absolute md:left-1/2 md:-translate-x-1/2 flex flex-col gap-1 justify-center items-center md:top-8 z-10 md:mt-0 mt-4">
 				<img class="w-32 xl:w-52 h-auto" src="/logo.webp" alt="logo">
 				<h1 class="text-5xl uppercase text-center font-facon bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-200 via-gray-400 to-gray-600 bg-clip-text text-transparent inline-block leading-relaxed">La Velada del Año</h1>
 			</div>
@@ -22,7 +22,7 @@ import boxers from "../clippath.json"
 			class={`flex justify-between relative
 			[&>div>img]:absolute [&>div>img]:bottom-0
 			[&>div>img]:w-auto
-			h-[50vh] lg:h-screen pt-24 border-b border-white/10
+			h-[40vh] md:h-[65vh] lg:h-screen pt-4 lg:pt-24 border-b border-white/10
 			[&>div>img]:animate-ease-in-out [&>div>img]:animate-duration-1000
 			`}>
 
@@ -57,32 +57,33 @@ import boxers from "../clippath.json"
 					style={boxers.ampeter.clip}>
 				</div>
 
-				<article id="info" class="absolute z-10 mx-auto left-1/2 -translate-x-1/2 bottom-8 font-facon">
-					<div class="text-center hover:[&>div>*]:scale-105 hover:[&>div>*]:transition hover:[&>div>*]:contrast-150">
-						<div class="px-5 bg-white text-black -mb-2">
-							<h2 class="text-3xl">1 de Julio</h2>
-						</div>
-						<div class="px-5 bg-black text-purple-500 -mb-4 text-7xl">
-							<a href="#" class="inline-block">Ibai</a>
-						</div>
-						<div class="px-5 bg-white text-black items-center flex text-center justify-center">
-							<a href="#" class="-mb-1">Sould All</a>
-						</div>
-					</div>
-				</article>
-
-				<article id="combat" class="absolute z-50 mx-auto left-1/2 -translate-x-1/2 bottom-48 font-facon opacity-0" >
-					<div class="px-5 bg-black pt-4 pb-2 flex justify-center">
-						<h3 class="text-7xl">Mayichi</h3>
-					</div>
-					<span class="left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-7xl block absolute text-purple-500 mt-3">
-						vs.
-					</span>
-					<div class="px-5 bg-white text-black flex justify-center">
-						<h3 class="text-7xl">Amouranth</h3>
-					</div>
-				</article>
+				
 			</section>
+			<article id="info" class="lg:absolute z-10 mx-auto lg:left-1/2 lg:-translate-x-1/2 lg: bottom-8 font-facon">
+				<div class="text-center hover:[&>div>*]:scale-105 hover:[&>div>*]:transition hover:[&>div>*]:contrast-150">
+					<div class="px-5 bg-white text-black -mb-2">
+						<h2 class="text-3xl">1 de Julio</h2>
+					</div>
+					<div class="px-5 bg-black text-purple-500 -mb-4 text-7xl">
+						<a href="#" class="inline-block">Ibai</a>
+					</div>
+					<div class="px-5 bg-white text-black items-center flex text-center justify-center">
+						<a href="#" class="-mb-1">Sould All</a>
+					</div>
+				</div>
+			</article>
+
+			<article id="combat" class="absolute z-50 mx-auto left-1/2 -translate-x-1/2 bottom-48 font-facon opacity-0" >
+				<div class="px-5 bg-black pt-4 pb-2 flex justify-center">
+					<h3 class="text-7xl">Mayichi</h3>
+				</div>
+				<span class="left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-7xl block absolute text-purple-500 mt-3 [text-shadow:2px_2px_0px_red,4px_4px_0px_orange,6px_6px_0px_violet]">
+					vs.
+				</span>
+				<div class="px-5 bg-white text-black flex justify-center">
+					<h3 class="text-7xl">Amouranth</h3>
+				</div>
+			</article>
 		</main>
 		<footer>		
 		</footer>
@@ -107,7 +108,7 @@ import boxers from "../clippath.json"
 			]
 
 			$info.setAttribute('style', 'opacity: 0; transition:all .3s ease-in-out')
-			$combat.setAttribute('style', 'opacity: 1; transition:all .3s ease-in-out')
+			$combat.setAttribute('style', 'opacity: 1; transition:all .3s ease-in-out; visibility:visible')
 			const [firstBoxerName,secondBoxerName]= $combat.querySelectorAll('h3')
 			firstBoxerName.innerText = leftBoxer.alt
 			secondBoxerName.innerText = rightBoxer.alt
@@ -132,7 +133,7 @@ import boxers from "../clippath.json"
 
 		$img.addEventListener('mouseout', (e) => {
 			$info.setAttribute('style', 'opacity: 1; transition:all .3s ease-in-out')
-			$combat.setAttribute('style', 'opacity: 0; transition:all .3s ease-in-out')
+			$combat.setAttribute('style', 'opacity: 0; transition:all .3s ease-in-out; visibility:hidden')
 			$boxersImages.forEach($img => {
 				$img.setAttribute(
 					'style',
