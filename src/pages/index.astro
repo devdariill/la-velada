@@ -17,7 +17,7 @@
 			</div>
 		</header>
 		<main>
-			<section id="boxeadores"
+			<section id="boxers"
 			class={`flex justify-between relative
 			[&>div>img]:absolute [&>div>img]:bottom-0
 			[&>div>img]:w-auto
@@ -63,6 +63,38 @@
 		</footer>
 	</body>
 </html>
+
+<script>
+	const $boxers = document.querySelector('#boxers')
+	const $boxersImages = $boxers.querySelectorAll('img')
+	$boxersImages.forEach($img => {
+		$img.addEventListener('mouseover', (e) => {
+			// console.log(e)
+			const sectionImages = $img.parentNode.children // all images in  the section
+			const position = Array.from(sectionImages).indexOf($img) // position of the image in the section
+			const [leftBoxer, rightBoxer] = [
+				$boxersImages[position], // left boxer
+				$boxersImages[position +$boxersImages.length/2 ]
+			]
+			// console.log(leftBoxer, rightBoxer)
+			// opacity the other boxers
+			$boxersImages.forEach($img => {
+				$img.setAttribute(
+					'style',
+					'filter: blur(2px) grayscale(.5); transition:all 1s ease-in-out'
+				)
+			})
+			leftBoxer.setAttribute(
+				'style',
+				'filter: blur(0px) grayscale(0); transition:all .3s ease-in-out'
+			)
+			rightBoxer.setAttribute(
+				'style',
+				'filter: blur(0px) grayscale(0); transition:all .3s ease-in-out'
+			)
+		})
+	})
+</script>
 
 <style is:global>
 	html{
