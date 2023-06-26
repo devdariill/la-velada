@@ -1,14 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<header class="relative">
-		<div class="absolute left-1/2 -translate-x-1/2 flex flex-col gap-1 justify-center items-center top-8">
-			<img class="w-32 lg:w-64 h-auto" src="/logo.webp" alt="logo">
-			<h1 class="text-6xl uppercase text-center font-facon">La Velada del Año</h1>
-		</div>
-	</header>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<header class="relative">
+			<div class="absolute left-1/2 -translate-x-1/2 flex flex-col gap-1 justify-center items-center top-8">
+				<img class="w-32 lg:w-64 h-auto" src="/logo.webp" alt="logo">
+				<h1 class="text-6xl uppercase text-center font-facon">La Velada del Año</h1>
+			</div>
+		</header>
 	<main>
 		<section id="boxeadores"
 		class={`flex justify-between relative
@@ -37,11 +44,10 @@ import Layout from '../layouts/Layout.astro';
 	</main>
 	<footer>		
 	</footer>
-</Layout>
+	</body>
+</html>
+
 <style is:global>
-	html {
-		color-scheme: dark;
-	}
 	/* @font-face {
 		font-family: 'Boxing';
 		src: url('/fonts/BrackleyDemoItalic.ttf');
