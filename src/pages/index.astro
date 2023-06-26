@@ -57,7 +57,7 @@ import boxers from "../clippath.json"
 					style={boxers.ampeter.clip}>
 				</div>
 
-				<article id="info" class="absolute z-50 mx-auto left-1/2 -translate-x-1/2 bottom-8 font-facon">
+				<article id="info" class="absolute z-10 mx-auto left-1/2 -translate-x-1/2 bottom-8 font-facon">
 					<div class="text-center hover:[&>div>*]:scale-105 hover:[&>div>*]:transition hover:[&>div>*]:contrast-150">
 						<div class="px-5 bg-white text-black -mb-2">
 							<h2 class="text-3xl">1 de Julio</h2>
@@ -71,7 +71,7 @@ import boxers from "../clippath.json"
 					</div>
 				</article>
 
-				<article id="combat" class="absolute z-50 mx-auto left-1/2 -translate-x-1/2 bottom-48 font-facon" >
+				<article id="combat" class="absolute z-50 mx-auto left-1/2 -translate-x-1/2 bottom-48 font-facon opacity-0" >
 					<div class="px-5 bg-black pt-4 pb-2 flex justify-center">
 						<h3 class="text-7xl">Mayichi</h3>
 					</div>
@@ -92,6 +92,10 @@ import boxers from "../clippath.json"
 <script>
 	const $boxers = document.querySelector('#boxers')
 	const $boxersImages = $boxers.querySelectorAll('img')
+
+	const $info = document.querySelector('#info')
+	const $combat = document.querySelector('#combat')
+
 	$boxersImages.forEach($img => {
 		$img.addEventListener('mouseover', (e) => {
 			// console.log(e)
@@ -101,6 +105,10 @@ import boxers from "../clippath.json"
 				$boxersImages[position], // left boxer
 				$boxersImages[position +$boxersImages.length/2 ]
 			]
+
+			$info.setAttribute('style', 'opacity: 0; transition:all .3s ease-in-out')
+			$combat.setAttribute('style', 'opacity: 1; transition:all .3s ease-in-out')
+
 			// console.log(leftBoxer, rightBoxer)
 			// opacity the other boxers
 			$boxersImages.forEach($img => {
@@ -119,6 +127,8 @@ import boxers from "../clippath.json"
 			)
 		})
 		$img.addEventListener('mouseout', (e) => {
+			$info.setAttribute('style', 'opacity: 1; transition:all .3s ease-in-out')
+			$combat.setAttribute('style', 'opacity: 0; transition:all .3s ease-in-out')
 			$boxersImages.forEach($img => {
 				$img.setAttribute(
 					'style',
@@ -126,7 +136,8 @@ import boxers from "../clippath.json"
 				)
 			})
 		})
-	})
+	})	
+	
 </script>
 
 <style is:global>
