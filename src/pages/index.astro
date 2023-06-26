@@ -10,7 +10,7 @@ import boxers from "../clippath.json"
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
+	<body>		
 		<header class="relative">
 			<div class="md:absolute md:left-1/2 md:-translate-x-1/2 flex flex-col gap-1 justify-center items-center md:top-8 z-10 md:mt-0 mt-4">
 				<img class="w-32 xl:w-52 h-auto" src="/logo.webp" alt="logo">
@@ -57,7 +57,11 @@ import boxers from "../clippath.json"
 					style={boxers.ampeter.clip}>
 				</div>
 
-				
+				<div class="absolute inset-0 mx-auto flex gap-x-1 -translate-x-1/2 left-1/2 justify-center">
+					<div class="w-2 blur-xs h-full bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900"></div>
+					<div class="w-2 blur-xs h-full bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900"></div>
+					<div class="w-2 blur-xs h-full bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900"></div>
+				</div>								
 			</section>
 			<article id="info" class="lg:absolute z-10 mx-auto lg:left-1/2 lg:-translate-x-1/2 lg: bottom-8 font-facon">
 				<div class="text-center hover:[&>div>*]:scale-105 hover:[&>div>*]:transition hover:[&>div>*]:contrast-150">
