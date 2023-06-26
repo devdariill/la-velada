@@ -1,4 +1,5 @@
 ---
+import boxers from "../clippath.json"
 ---
 
 <html lang="en">
@@ -28,20 +29,32 @@
 				<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#131313] via-zinc-900 to-zinc-950"></div>
 
 				<div class="relative w-full">
-					<img class="left-0 h-[95%] animate-fade-right animate-delay-500 z-50" src="/boxers/coscu.webp" alt="Coscu">
-					<img class="left-[5%] h-[80%] animate-fade-right animate-delay-700 z-40" src="/boxers/mayichi.webp" alt="Mayichi">
-					<img class="left-[15%] h-[75%] animate-fade-right animate-delay-1000 z-30" src="/boxers/viruzz.webp" alt="Viruzz">
-					<img class="left-[28%] h-[70%] animate-fade-right animate-delay-[1300ms] z-20" src="/boxers/fernanfloo.webp" alt="Fernanfloo">
-					<img class="left-[38%] h-[68%] animate-fade-right animate-delay-[1500ms] z-10" src="/boxers/la-rivers.webp" alt="La Rivers">
-					<img class="left-[43%] h-[60%] animate-fade-right animate-delay-[1700ms] z-0" src="/boxers/papigavi.webp" alt="Papi Gavi">
+					<img class="left-0 h-[95%] animate-fade-right animate-delay-500 z-50" src="/boxers/coscu.webp" alt="Coscu" 
+					style={boxers.coscu.clip}>
+					<img class="left-[5%] h-[80%] animate-fade-right animate-delay-700 z-40" src="/boxers/mayichi.webp" alt="Mayichi" 
+					style={boxers.mayichi.clip}>
+					<img class="left-[15%] h-[75%] animate-fade-right animate-delay-1000 z-30" src="/boxers/viruzz.webp" alt="Viruzz" 
+					style={boxers.viruzz.clip}>
+					<img class="left-[26%] h-[70%] animate-fade-right animate-delay-[1300ms] z-20" src="/boxers/fernanfloo.webp" alt="Fernanfloo" 
+					style={boxers.fernanfloo.clip}>
+					<img class="left-[38%] h-[68%] animate-fade-right animate-delay-[1500ms] z-10" src="/boxers/la-rivers.webp" alt="La Rivers" 
+					style={boxers["la-rivers"].clip}>
+					<img class="left-[43%] h-[60%] animate-fade-right animate-delay-[1700ms] z-0" src="/boxers/papigavi.webp" alt="Papi Gavi" 
+					style={boxers.papigavi.clip}>
 				</div>
 				<div class="relative w-full">
-					<img class="right-0 h-[95%] animate-fade-left animate-delay-500 z-50" src="/boxers/german.webp" alt="German">
-					<img class="right-[5%] h-[80%] animate-fade-left animate-delay-700 z-40" src="/boxers/amouranth.webp" alt="Amouranth">
-					<img class="right-[15%] h-[75%] animate-fade-left animate-delay-1000 z-30" src="/boxers/shelao.webp" alt="Shelao">
-					<img class="right-[28%] h-[70%] animate-fade-left animate-delay-[1300ms] z-20" src="/boxers/luzu.webp" alt="Luzu">
-					<img class="right-[38%] h-[65%] animate-fade-left animate-delay-[1500ms] z-10" src="/boxers/rivers.webp" alt="Rivers">
-					<img class="right-[43%] h-[60%] animate-fade-left animate-delay-[1700ms] z-0" src="/boxers/ampeter.webp" alt="Ampeter">
+					<img class="right-0 h-[95%] animate-fade-left animate-delay-500 z-50" src="/boxers/german.webp" alt="German" 
+					style={boxers.german.clip}>
+					<img class="right-[5%] h-[80%] animate-fade-left animate-delay-700 z-40" src="/boxers/amouranth.webp" alt="Amouranth" 
+					style={boxers.amouranth.clip}>
+					<img class="right-[15%] h-[75%] animate-fade-left animate-delay-1000 z-30" src="/boxers/shelao.webp" alt="Shelao" 
+					style={boxers.shelao.clip}>
+					<img class="right-[28%] h-[70%] animate-fade-left animate-delay-[1300ms] z-20" src="/boxers/luzu.webp" alt="Luzu" 
+					style={boxers.luzu.clip}>
+					<img class="right-[38%] h-[65%] animate-fade-left animate-delay-[1500ms] z-10" src="/boxers/rivers.webp" alt="Rivers" 
+					style={boxers.rivers.clip}>
+					<img class="right-[43%] h-[60%] animate-fade-left animate-delay-[1700ms] z-0" src="/boxers/ampeter.webp" alt="Ampeter" 
+					style={boxers.ampeter.clip}>
 				</div>
 
 				<article id="info" class="absolute z-50 mx-auto left-1/2 -translate-x-1/2 bottom-8 font-facon">
