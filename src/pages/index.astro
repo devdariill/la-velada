@@ -108,6 +108,9 @@ import boxers from "../clippath.json"
 
 			$info.setAttribute('style', 'opacity: 0; transition:all .3s ease-in-out')
 			$combat.setAttribute('style', 'opacity: 1; transition:all .3s ease-in-out')
+			const [firstBoxerName,secondBoxerName]= $combat.querySelectorAll('h3')
+			firstBoxerName.innerText = leftBoxer.alt
+			secondBoxerName.innerText = rightBoxer.alt
 
 			// console.log(leftBoxer, rightBoxer)
 			// opacity the other boxers
@@ -126,6 +129,7 @@ import boxers from "../clippath.json"
 				'filter: blur(0px) grayscale(0); transition:all .3s ease-in-out'
 			)
 		})
+
 		$img.addEventListener('mouseout', (e) => {
 			$info.setAttribute('style', 'opacity: 1; transition:all .3s ease-in-out')
 			$combat.setAttribute('style', 'opacity: 0; transition:all .3s ease-in-out')
